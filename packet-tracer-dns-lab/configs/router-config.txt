@@ -1,0 +1,16 @@
+enable
+configure terminal
+hostname Router0
+!
+interface GigabitEthernet0/0/0
+ description LAN to Switch0
+ ip address 192.168.0.1 255.255.255.0
+ no shutdown
+!
+interface GigabitEthernet0/0/1
+ description Link to DNS Server
+ ip address 8.8.8.1 255.0.0.0
+ no shutdown
+!
+end
+write memory
